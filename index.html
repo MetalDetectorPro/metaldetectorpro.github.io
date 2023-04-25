@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Metal Detector Pro</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		h1 {
+			font-size: 36px;
+			color: #333;
+			text-align: center;
+			margin-top: 0;
+		}
+		p {
+			font-size: 18px;
+			color: #666;
+			text-align: justify;
+			line-height: 1.5;
+		}
+		.button {
+			display: inline-block;
+			padding: 12px 44px;
+			background-color: #007bff;
+			color: #fff;
+			font-size: 18px;
+			text-decoration: none;
+			border-radius: 8px;
+			margin: 30px 10px;
+			transition: background-color 0.3s ease;
+		}
+		.button:hover {
+			background-color: #0062cc;
+		}
+		.photo {
+			display: block;
+			margin: 0 auto;
+			max-width: 21%;
+			height: auto;
+			margin-top: 20px;
+		}
+		.animation {
+			width: 100%;
+			height: 200px;
+			background: #007bff;
+			position: relative;
+			overflow: hidden;
+		}
+		.circle {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			animation: ripple 2s linear infinite;
+		}
+		.circle:nth-child(2) {
+			animation-delay: 0.5s;
+		}
+		.circle:nth-child(3) {
+			animation-delay: 1s;
+		}
+		@keyframes ripple {
+			0% {
+				transform: scale(1);
+				opacity: 1;
+			}
+			100% {
+				transform: scale(100);
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Metal Detector Pro</h1>
+		<p>Discover hidden treasures with our Metal Detector Pro app! Our advanced metal detection technology will help you find precious metals and artifacts with ease. Whether you're a treasure hunter or a hobbyist, Metal Detector Pro is the perfect tool for you.</p>
+		<div class="animation">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		<img class="photo" src="Artboard 5.png" alt="Photo 1">
+		<p>Our app uses state-of-the-art algorithms to detect metals and other materials underground. With Metal Detector Pro, you can easily locate coins, jewelry, and other valuable items that are buried beneath the surface.</p>
+		<img class="photo" src="Artboard 4.png" alt="Photo 2">
+		<p>Our app is easy to use and comes with a range of advanced features. You can customize the sensitivity settings, choose from different detection modes, and even track your finds with GPS. Metal Detector Pro is the ultimate tool for any serious treasure hunter.</p>
+			<img class="photo" src="Artboard 3.png" alt="Photo 3">
+	<p>Download Metal Detector Pro today and start uncovering hidden treasures! Our app is available for both iOS and Android devices.</p>
+	<div>
+		<a class="button" href="kf.html">
+Privacy Policy</a>
+		<a class="button" href="pf.html">Terms & Conditions</a>
+		<a class="button" href="wf.html">delete game data</a>
+	</div>
+</div>
+</body>
+</html>

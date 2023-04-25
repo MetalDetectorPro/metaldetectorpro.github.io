@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Metal Detector Pro</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #161616;
+      color: #fff;
+      line-height: 1.4;
+      min-height: 100vh;
+    }
+    
+    header {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    
+    .hero {
+      height: 70vh;
+      background-image: url('https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%);
+      z-index: 1;
+    }
+    
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    
+    .hero__title {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 0 #000;
+    }
+    
+    .hero__description {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      max-width: 60rem;
+      margin: 0 auto;
+      text-shadow: 2px 2px 0 #000;
+    }
+    
+    .hero__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    
+    .hero__input {
+      font-size: 1.5rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      margin-right: 1rem;
+    }
+    
+    .hero__submit {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #dc3545;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .hero__submit:hover {  background-color: #c82333;
+}
+
+.features {
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.feature {
+  margin: 2rem;
+  max-width: 25rem;
+  text-align: center;
+}
+
+.feature__icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: #dc3545;
+}
+
+.feature__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature__description {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.cta {
+  background: #dc3545;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.cta__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.cta__description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.cta__button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #dc3545;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta__button:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+@keyframes bg-anim {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #1b1b1b 0%, #161616 50%, #0d0d0d 100%);
+  z-index: -1;
+  animation: bg-anim 10s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .hero {
+    height: auto;
+    min-height: 70vh;
+  }
+  
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .hero__description {
+    font-size: 1.2rem;
+  }
+  
+  .hero__form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .hero__input {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Metal Detector Pro</h1>
+    <a href="#">Log out</a>
+  </header>
+  <div class="hero">
+    <div class="hero__content">
+      <h2 class="hero__title">Delete your personal data with ease</h2>
+      <p class="hero__description">Enter your email address and we'll send you a link to delete all your personal data.</p>
+      <form class="hero__form">
+        <div class="hero__input">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email address" required>
+        </div>
+        <button class="hero__button">Send link</button>
+      </form>
+    </div>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <i class="fas fa-lock feature__icon"></i>
+      <h3 class="feature__title">Secure</h3>
+      <p class="feature__description">We use state-of-the-art encryption to protect your personal data.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-check feature__icon"></i>
+      <h3 class="feature__title">Easy to use</h3>
+      <p class="feature__description">Just enter your email address and we'll do the rest.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-trash-alt feature__icon"></i>
+      <h3 class="feature__title">Delete all your data</h3>
+      <p class="feature__description">We'll delete all your personal data, including your name, email address, and any other information you've provided us.</p>
+    </div>
+  </div>
+  <div class="cta">
+    <h2 class="cta__title">Ready to delete your personal data?</h2>
+    <p class="cta__description">Enter your email address below and we'll send you a link to delete all your personal data.</p>
+    <form class="cta__form">
+      <div class="cta__input">
+        <label for="email2">Email</label>
+        <input type="email" id="email2" placeholder="Enter your email address" required>
+      </div>
+      <button class="cta__button">Send link</button>
+    </form>
+  </div>
+</body>
+</html>
+     
